@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>식물도감 - 여인초</title>
+  <style>
+    body {
+      margin: 0; padding: 40px 20px;
+      background-color: #fdfdfd;
+      background-image: radial-gradient(#e0e0e0 1.5px, transparent 1.5px);
+      background-size: 25px 25px;
+      font-family: 'RidiBatang', serif;
+      display: flex; flex-direction: column; align-items: center; min-height: 100vh;
+      box-sizing: border-box;
+    }
+    .btn-back { align-self: flex-start; margin-bottom: 20px; max-width: 500px; width: 100%; display: flex; justify-content: flex-start; }
+    .btn-back button { background: #fff; border: 1px solid #ddd; padding: 10px 20px; border-radius: 30px; cursor: pointer; font-family: 'RidiBatang', serif; font-size: 0.9rem; transition: 0.3s; display: flex; align-items: center; gap: 8px; }
+    .btn-back button:hover { background: #f9f9f9; border-color: #CFFF04; transform: translateX(-5px); }
+
+    .detail-container {
+      background-color: #fff; width: 100%; max-width: 480px;
+      border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid #eee;
+    }
+    .img-box { width: 100%; height: 320px; }
+    .img-box img { width: 100%; height: 100%; object-fit: cover; }
+    .info-box { padding: 35px; }
+    .title { font-size: 2.2rem; font-weight: 800; color: #111; margin: 0 0 15px 0; }
+    .desc { font-size: 1rem; line-height: 1.7; color: #555; margin-bottom: 30px; word-break: keep-all; }
+    .care-list { list-style: none; padding: 0; margin: 0 0 30px 0; }
+    .care-list li { font-size: 1rem; margin-bottom: 15px; color: #333; display: flex; align-items: center; }
+    .care-list strong { display: inline-block; width: 85px; color: #111; flex-shrink: 0; }
+    .recommend-box { background-color: #fcfdf8; border-left: 5px solid #CFFF04; padding: 20px; border-radius: 0 8px 8px 0; }
+    .recommend-box h4 { margin: 0 0 10px 0; font-size: 1.1rem; font-weight: 800; color: #111; }
+    .recommend-box p { margin: 0; font-size: 1rem; color: #555; line-height: 1.6; word-break: keep-all; }
+  </style>
+</head>
+<body>
+
+  <div class="btn-back">
+    <button onclick="history.back()">← 돌아가기</button>
+  </div>
+
+  <div class="detail-container">
+    <div class="img-box">
+      <img src="assets/img/plant3.jpg" alt="여인초">
+    </div>
+    <div class="info-box">
+      <h2 class="title">여인초</h2>
+      <p class="desc">시원하게 뻗은 넓은 잎이 매력적인 대형 식물입니다. 실내 습도 조절에 탁월하며 거실 한 켠에 두면 휴양지 같은 플랜테리어 효과를 톡톡히 봅니다.</p>
+      
+      <ul class="care-list">
+        <li><strong>💧 물:</strong> 겉흙이 마르면 듬뿍 (과습 주의)</li>
+        <li><strong>☀️ 햇빛:</strong> 빛이 잘 들어오는 밝은 곳</li>
+        <li><strong>🌡️ 온도:</strong> 18~25℃</li>
+      </ul>
+      
+      <div class="recommend-box">
+        <h4>이런 분께 추천해요</h4>
+        <p>넓은 공간을 시원하게 꾸미고 싶은 분, 꼼꼼하게 식물 상태를 체크하며 키우는 성취감을 즐기는 분 (S/J 성향 추천)</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

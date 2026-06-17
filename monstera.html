@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>식물도감 - 몬스테라</title>
+  <style>
+    /* 배경 */
+    body {
+      margin: 0; padding: 40px 20px; /* 상하 여백을 주어 카드가 떠 보이게 함 */
+      background-color: #fdfdfd;
+      background-image: radial-gradient(#e0e0e0 1.5px, transparent 1.5px);
+      background-size: 25px 25px;
+      font-family: 'RidiBatang', serif;
+      display: flex; flex-direction: column; align-items: center; min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    /* 돌아가기 버튼 스타일 */
+    .btn-back {
+      align-self: flex-start;
+      margin-bottom: 20px;
+      max-width: 500px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+    }
+    .btn-back button {
+      background: #fff; border: 1px solid #ddd; padding: 10px 20px;
+      border-radius: 30px; cursor: pointer; font-family: 'RidiBatang', serif;
+      font-size: 0.9rem; transition: 0.3s; display: flex; align-items: center; gap: 8px;
+    }
+    .btn-back button:hover { background: #f9f9f9; border-color: #CFFF04; transform: translateX(-5px); }
+
+    /* 메인 카드 컨테이너 */
+    .detail-container {
+      background-color: #fff; width: 100%; max-width: 480px; /* 가로폭을 살짝 줄여 더 깔끔하게 함 */
+      border-radius: 20px; overflow: hidden; 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* 그림자를 더 깊게 주어 입체감 강조 */
+      border: 1px solid #eee;
+    }
+    .img-box { width: 100%; height: 320px; }
+    .img-box img { width: 100%; height: 100%; object-fit: cover; }
+    .info-box { padding: 35px; }
+    .title { font-size: 2.2rem; font-weight: 800; color: #111; margin: 0 0 15px 0; }
+    .desc { font-size: 1rem; line-height: 1.7; color: #555; margin-bottom: 30px; word-break: keep-all; }
+    
+    .care-list { list-style: none; padding: 0; margin: 0 0 30px 0; }
+    .care-list li { font-size: 1rem; margin-bottom: 15px; color: #333; display: flex; align-items: center; }
+    .care-list strong { display: inline-block; width: 85px; color: #111; flex-shrink: 0; }
+
+    .recommend-box {
+      background-color: #fcfdf8; border-left: 5px solid #CFFF04;
+      padding: 20px; border-radius: 0 8px 8px 0;
+    }
+    .recommend-box h4 { margin: 0 0 10px 0; font-size: 1.1rem; font-weight: 800; color: #111; }
+    .recommend-box p { margin: 0; font-size: 1rem; color: #555; line-height: 1.6; word-break: keep-all; }
+  </style>
+</head>
+<body>
+
+  <div class="btn-back">
+    <button onclick="history.back()">← 돌아가기</button>
+  </div>
+
+  <div class="detail-container">
+    <div class="img-box">
+      <img src="assets/img/plant1.jpg" alt="몬스테라">
+    </div>
+    <div class="info-box">
+      <h2 class="title">몬스테라</h2>
+      <p class="desc">매력적인 구멍 뚫린 잎을 가진 플랜테리어의 대표 주자입니다. 이국적인 분위기를 연출하며 생명력이 강해 초보자도 쉽게 키울 수 있어요.</p>
+      
+      <ul class="care-list">
+        <li><strong>💧 물:</strong> 겉흙이 충분히 말랐을 때 듬뿍 (주 1~2회)</li>
+        <li><strong>☀️ 햇빛:</strong> 반양지 ~ 반음지 (직사광선 피하기)</li>
+        <li><strong>🌡️ 온도:</strong> 16~20℃</li>
+      </ul>
+      
+      <div class="recommend-box">
+        <h4>이런 분께 추천해요</h4>
+        <p>햇빛이 잘 드는 방에 있는 분, 물 주기를 좋아하고 식물과 교감하는 것을 귀찮아하지 않는 분 (E/F 성향 추천)</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

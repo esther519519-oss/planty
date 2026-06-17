@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 - Planty</title>
+  <style>
+    /* 하얀색 점박이 배경, 애니메이션 */
+    body {
+      margin: 0; padding: 40px 20px;
+      background-color: #ffffff;
+      background-image: radial-gradient(#d0d0d0 1.5px, transparent 1.5px);
+      background-size: 25px 25px;
+      font-family: 'RidiBatang', serif;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      min-height: 100vh; box-sizing: border-box; color: #333;
+      overflow-x: hidden;
+      
+      /* 화면 효과 */
+      animation: slideIn 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    /* 돌아가기 */
+    .btn-back { align-self: flex-start; margin-bottom: 20px; max-width: 700px; width: 100%; display: flex; margin: 0 auto 20px auto; }
+    .btn-back button { background: #fff; border: 1px solid #ddd; padding: 10px 20px; border-radius: 30px; cursor: pointer; font-family: 'RidiBatang', serif; font-size: 0.9rem; font-weight: 800; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; }
+    .btn-back button:hover { background: #111; color: #CFFF04; transform: translateX(-5px); }
+
+    /* 이벤트 카드 */
+    .event-container { 
+      width: 100%; max-width: 700px; background: #fff; border-radius: 20px; 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 2px solid #CFFF04; overflow: hidden; margin: 0 auto;
+    }
+    
+    .event-header { background: #CFFF04; padding: 30px; text-align: center; }
+    .badge { display: inline-block; background: #111; color: #CFFF04; padding: 6px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 800; margin-bottom: 15px; }
+    .event-title { font-size: 2.2rem; font-weight: 800; color: #111; margin: 0; letter-spacing: -1px; }
+
+    .event-body { padding: 40px; text-align: center; }
+    .event-desc { font-size: 1.15rem; line-height: 1.6; color: #555; margin-bottom: 30px; word-break: keep-all; }
+    
+    .event-box { background: #f9f9f9; padding: 25px; border-radius: 15px; margin-bottom: 30px; border: 1px dashed #ccc; }
+    .event-box h4 { margin: 0 0 10px 0; font-size: 1.2rem; color: #6C9943; font-weight: 800; }
+    .event-box p { margin: 0; font-size: 1.05rem; color: #333; }
+
+    .btn-action { 
+      background: #111; color: #CFFF04; border: none; padding: 18px 40px; 
+      border-radius: 30px; font-size: 1.2rem; font-weight: 800; font-family: 'RidiBatang', serif; 
+      cursor: pointer; transition: 0.3s; text-decoration: none; display: inline-block;
+    }
+    .btn-action:hover { background: #333; transform: scale(1.05); }
+
+  </style>
+</head>
+<body>
+
+  <div class="btn-back">
+    <button onclick="location.href='index.html'">← 메인으로 돌아가기</button>
+  </div>
+
+  <div class="event-container">
+    <div class="event-header">
+      <span class="badge">EVENT</span>
+      <h2 class="event-title">Pl@nty Event ♥ </h2>
+    </div>
+    
+    <div class="event-body">
+      <p class="event-desc">플랜티 웹사이트 방문을 환영합니다 ♥ <br>정성스러운 방명록을 남겨주신 분들 중 추첨을 통해<br><strong>'미니 몬스테라 화분 세트'</strong>를 선물로 보내드립니다.</p>
+      
+      <div class="event-box">
+        <h4>참여 방법</h4>
+        <p>GUESTBOOK(방명록) 페이지에 접속하여<br>자유로운 식물 이야기나 응원 메시지를 남겨주세요!</p>
+      </div>
+
+      <a href="guestbook.html" class="btn-action">방명록 쓰러 가기 ➔</a>
+    </div>
+  </div>
+
+</body>
+</html>

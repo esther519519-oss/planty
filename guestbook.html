@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>방명록 - Planty</title>
+  <style>
+    /* 기본 배경 */
+    body {
+      margin: 0; padding: 40px 20px;
+      background-color: #6C9943;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.15) 2px, transparent 2px);
+      background-size: 25px 25px;
+      font-family: 'RidiBatang', serif;
+      display: flex; flex-direction: column; align-items: center; min-height: 100vh;
+      box-sizing: border-box; color: #333;
+    }
+
+    /* 돌아가기 */
+    .btn-back { align-self: flex-start; margin-bottom: 20px; max-width: 650px; width: 100%; display: flex; margin: 0 auto 20px auto; }
+    .btn-back button { background: #fff; border: none; padding: 10px 20px; border-radius: 30px; cursor: pointer; font-family: 'RidiBatang', serif; font-size: 0.9rem; font-weight: 800; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s; }
+    .btn-back button:hover { background: #CFFF04; transform: translateX(-5px); }
+
+    /* 메인 카드 */
+    .guestbook-container { width: 100%; max-width: 650px; background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); box-sizing: border-box; margin: 0 auto; }
+    .gb-title { font-size: 2.5rem; font-weight: 800; color: #111; text-align: center; margin: 0 0 30px 0; letter-spacing: 2px; }
+
+    /* 입력 폼 */
+    .gb-form { display: flex; flex-direction: column; gap: 15px; margin-bottom: 40px; }
+    .gb-input, .gb-textarea { width: 100%; padding: 15px; border: 2px solid #eee; border-radius: 10px; font-family: 'RidiBatang', serif; font-size: 1rem; box-sizing: border-box; outline: none; transition: border 0.3s; }
+    .gb-input:focus, .gb-textarea:focus { border-color: #6C9943; }
+    .gb-textarea { resize: none; height: 120px; }
+    .btn-submit { background: #6C9943; color: #fff; border: none; padding: 15px; border-radius: 10px; font-size: 1.1rem; font-weight: 800; font-family: 'RidiBatang', serif; cursor: pointer; transition: 0.3s; }
+    .btn-submit:hover { background: #5a8037; }
+
+    /* 방명록 리스트 */
+    .gb-list { display: flex; flex-direction: column; gap: 20px; }
+    .gb-item { background: #fcfdf8; padding: 25px; border-radius: 10px; border-left: 5px solid #CFFF04; }
+    .gb-author { font-weight: 800; font-size: 1.15rem; margin-bottom: 10px; color: #111; display: flex; justify-content: space-between; align-items: center; }
+    .gb-date { font-size: 0.85rem; color: #888; font-weight: 400; }
+    .gb-msg { font-size: 1.05rem; line-height: 1.6; color: #555; margin: 0; word-break: keep-all; }
+  </style>
+</head>
+<body>
+
+  <div class="btn-back">
+    <button onclick="history.back()">← 돌아가기</button>
+  </div>
+
+  <div class="guestbook-container">
+    <h2 class="gb-title">GUESTBOOK</h2>
+    
+    <div class="gb-form">
+      <input type="text" class="gb-input" placeholder="이름이나 닉네임을 적어주세요">
+      <textarea class="gb-textarea" placeholder="웹사이트 방문 소감이나 식물 이야기를 자유롭게 남겨주세요! 🌿"></textarea>
+      <button class="btn-submit" onclick="alert('방명록이 등록되었습니다!')">글 남기기</button>
+    </div>
+
+    <div class="gb-list">
+      <div class="gb-item">
+        <div class="gb-author">초보식집사 <span class="gb-date">2026.06.17</span></div>
+        <p class="gb-msg">플랜티 덕분에 몬스테라를 아주 잘 키우고 있어요! 웹사이트가 너무 예뻐요 감사합니다.</p>
+      </div>
+      <div class="gb-item">
+        <div class="gb-author">플랜트러버 <span class="gb-date">2026.06.16</span></div>
+        <p class="gb-msg">MBTI 테스트 결과가 너무 찰떡이라 놀랐네요 ㅎㅎ 스투키 입양하고 갑니다 총총..</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

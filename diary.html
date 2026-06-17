@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>식물 그림 일기 - Planty</title>
+  <style>
+    /* 1. 점박이 배경 */
+    body {
+      margin: 0; padding: 40px 20px;
+      background-color: #ffffff;
+      background-image: radial-gradient(#d0d0d0 1.5px, transparent 1.5px);
+      background-size: 25px 25px;
+      font-family: 'RidiBatang', serif;
+      display: flex; flex-direction: column; align-items: center; min-height: 100vh;
+      box-sizing: border-box; color: #333;
+    }
+
+    /* 2. 돌아가기 버튼 */
+    .btn-back { align-self: flex-start; margin-bottom: 20px; max-width: 650px; width: 100%; margin: 0 auto 20px auto; display: flex; }
+    .btn-back button { background: #fff; border: 1px solid #ddd; padding: 10px 20px; border-radius: 30px; cursor: pointer; font-family: 'RidiBatang', serif; font-size: 0.9rem; font-weight: 800; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; }
+    .btn-back button:hover { background: #111; color: #CFFF04; transform: translateX(-5px); }
+
+    /* 3. 일기장 메인 틀 */
+    .diary-container { 
+      width: 100%; max-width: 650px; background: #fffcf5; 
+      padding: 40px; border-radius: 40px 15px 40px 15px; 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 3px solid #e8e6d9; box-sizing: border-box; margin: 0 auto;
+    }
+    
+    .diary-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 25px; border-bottom: 2px dashed #ccc; padding-bottom: 15px; }
+    .diary-title { font-size: 2rem; font-weight: 800; color: #6C9943; margin: 0; }
+    .diary-date { font-size: 1.1rem; color: #777; border: none; background: transparent; font-family: 'RidiBatang', serif; outline: none; text-align: right; }
+
+    /* 4. 사진 영역 */
+    .diary-drawing { 
+      width: 100%; height: 400px; background-color: #f0f0f0; border-radius: 20px; margin-bottom: 25px;
+      overflow: hidden; position: relative; border: 2px solid #ddd;
+    }
+    .diary-drawing img { width: 100%; height: 100%; object-fit: cover; }
+    .photo-btn {
+      position: absolute; bottom: 15px; right: 15px; background: rgba(255,255,255,0.9);
+      border: 1px solid #ccc; padding: 8px 15px; border-radius: 20px; font-family: 'RidiBatang', serif;
+      font-size: 0.85rem; font-weight: bold; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s;
+    }
+    .photo-btn:hover { background: #CFFF04; border-color: #111; color: #111; }
+
+    /* 5. 글쓰기 영역 (공책 줄무늬) */
+    .diary-textarea { 
+      width: 100%; height: 150px; padding: 20px; border: none; background: transparent;
+      font-family: 'RidiBatang', serif; font-size: 1.1rem; line-height: 1.8; color: #444;
+      box-sizing: border-box; outline: none; resize: none;
+      background-image: repeating-linear-gradient(transparent, transparent 31px, #eee 31px, #eee 32px);
+      background-attachment: local;
+    }
+    .diary-textarea::placeholder { color: #aaa; }
+
+    /* 6. 등록 버튼 */
+    .btn-submit-wrapper { text-align: center; margin-top: 30px; }
+    .btn-submit { 
+      background: #6C9943; color: #fff; border: none; padding: 15px 40px; 
+      border-radius: 30px; font-size: 1.2rem; font-weight: 800; font-family: 'RidiBatang', serif; 
+      cursor: pointer; transition: 0.3s; box-shadow: 0 4px 10px rgba(108, 153, 67, 0.3);
+    }
+    .btn-submit:hover { background: #5a8037; transform: translateY(-3px); }
+  </style>
+</head>
+<body>
+
+  <div class="btn-back">
+    <button onclick="location.href='index.html'">← 대시보드로 돌아가기</button>
+  </div>
+
+  <div class="diary-container">
+    <div class="diary-header">
+      <h2 class="diary-title">My Diary ♡̇</h2>
+      <input type="date" class="diary-date" value="2026-06-17">
+    </div>
+
+    <div class="diary-drawing">
+      <img src="assets/img/asparagus.jpg" alt="오늘의 식물 사진">
+      <button class="photo-btn">📷 사진 변경</button>
+    </div>
+
+    <textarea class="diary-textarea" placeholder="오늘 식물에게 어떤 일이 있었나요? 물을 흠뻑 주었거나, 새 잎이 돋아난 이야기를 자유롭게 적어보세요."></textarea>
+
+    <div class="btn-submit-wrapper">
+      <button class="btn-submit" onclick="alert('오늘의 그림 일기가 등록되었습니다!')">일기 등록</button>
+    </div>
+  </div>
+
+</body>
+</html>

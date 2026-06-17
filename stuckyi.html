@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>식물도감 - 스투키</title>
+  <style>
+    body {
+      margin: 0; padding: 40px 20px;
+      background-color: #fdfdfd;
+      background-image: radial-gradient(#e0e0e0 1.5px, transparent 1.5px);
+      background-size: 25px 25px;
+      font-family: 'RidiBatang', serif;
+      display: flex; flex-direction: column; align-items: center; min-height: 100vh;
+      box-sizing: border-box;
+    }
+    .btn-back { align-self: flex-start; margin-bottom: 20px; max-width: 500px; width: 100%; display: flex; justify-content: flex-start; }
+    .btn-back button { background: #fff; border: 1px solid #ddd; padding: 10px 20px; border-radius: 30px; cursor: pointer; font-family: 'RidiBatang', serif; font-size: 0.9rem; transition: 0.3s; display: flex; align-items: center; gap: 8px; }
+    .btn-back button:hover { background: #f9f9f9; border-color: #CFFF04; transform: translateX(-5px); }
+
+    .detail-container {
+      background-color: #fff; width: 100%; max-width: 480px;
+      border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid #eee;
+    }
+    .img-box { width: 100%; height: 320px; }
+    .img-box img { width: 100%; height: 100%; object-fit: cover; }
+    .info-box { padding: 35px; }
+    .title { font-size: 2.2rem; font-weight: 800; color: #111; margin: 0 0 15px 0; }
+    .desc { font-size: 1rem; line-height: 1.7; color: #555; margin-bottom: 30px; word-break: keep-all; }
+    .care-list { list-style: none; padding: 0; margin: 0 0 30px 0; }
+    .care-list li { font-size: 1rem; margin-bottom: 15px; color: #333; display: flex; align-items: center; }
+    .care-list strong { display: inline-block; width: 85px; color: #111; flex-shrink: 0; }
+    .recommend-box { background-color: #fcfdf8; border-left: 5px solid #CFFF04; padding: 20px; border-radius: 0 8px 8px 0; }
+    .recommend-box h4 { margin: 0 0 10px 0; font-size: 1.1rem; font-weight: 800; color: #111; }
+    .recommend-box p { margin: 0; font-size: 1rem; color: #555; line-height: 1.6; word-break: keep-all; }
+  </style>
+</head>
+<body>
+
+  <div class="btn-back">
+    <button onclick="history.back()">← 돌아가기</button>
+  </div>
+
+  <div class="detail-container">
+    <div class="img-box">
+      <img src="assets/img/plant2.jpg" alt="스투키">
+    </div>
+    <div class="info-box">
+      <h2 class="title">스투키</h2>
+      <p class="desc">공기 정화 능력이 탁월하며 밤에 산소를 뿜어내는 기특한 식물입니다. 물을 자주 주지 않아도 혼자서 씩씩하게 잘 자라 바쁜 현대인에게 안성맞춤이에요.</p>
+      
+      <ul class="care-list">
+        <li><strong>💧 물:</strong> 한 달에 1번 흙이 완전히 말랐을 때 듬뿍</li>
+        <li><strong>☀️ 햇빛:</strong> 햇빛이 잘 드는 밝은 곳</li>
+        <li><strong>🌡️ 온도:</strong> 15~30℃</li>
+      </ul>
+      
+      <div class="recommend-box">
+        <h4>이런 분께 추천해요</h4>
+        <p>물 주기를 자주 깜빡하시는 분, 바쁜 일상 속에서도 방치된 듯 묵묵히 자라는 식물을 원하는 분 (I/T 성향 추천)</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
